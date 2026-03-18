@@ -144,5 +144,10 @@ console.log(mayoresA18(usuarios))
 const sumarArrays2 = unArray => unArray.reduce((a,b) => a + b, 0);
 console.log(sumarArrays2(Prueba));
 
-//----------Parte 5 — Destructuring y Spread----------//
-//-------------------EJ14-----------------------//
+//----------Parte 6 — Problemas más reales----------//
+//-------------------EJ16-----------------------//
+
+const buscarProducto = (productos, nombre) => productos.filter(e => e.nombre === nombre);
+console.log(buscarProducto(productos, "Mouse"));
+
+//-------------------EJ17-----------------------//
