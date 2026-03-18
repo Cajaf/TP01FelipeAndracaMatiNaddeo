@@ -126,3 +126,23 @@ console.log(precioTotal(productos));
 //--------------Parte 4 — ES6-----------------//
 //-------------------EJ11-----------------------//
 
+const usuarios = [
+{nombre:"Ana", edad:17},
+{nombre:"Juan", edad:25},
+{nombre:"Pedro", edad:30}
+]
+const soloNombres = usuarios => usuarios.map(e => e.nombre);
+console.log(soloNombres(usuarios));
+
+//-------------------EJ12-----------------------//
+
+const mayoresA18 = usuarios => usuarios.filter(e => e.edad >= 18);
+console.log(mayoresA18(usuarios))
+
+//-------------------EJ13-----------------------//
+
+const sumarArrays2 = unArray => unArray.reduce((a,b) => a + b, 0);
+console.log(sumarArrays2(Prueba));
+
+//----------Parte 5 — Destructuring y Spread----------//
+//-------------------EJ14-----------------------//
