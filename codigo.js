@@ -159,7 +159,40 @@ console.log(sumarArrays2(Prueba));
 //----------Parte 6 — Problemas más reales----------//
 //-------------------EJ16-----------------------//
 
-const buscarProducto = (productos, nombre) => productos.filter(e => e.nombre === nombre);
+const buscarProducto = (productos, nombre) => productos[productos.indexOf(nombre)]
 console.log(buscarProducto(productos, "Mouse"));
 
 //-------------------EJ17-----------------------//
+
+const productosCaros = productos => productos.filter(e => e.precio >50);
+console.log(productosCaros(productos));
+
+//-------------------EJ18-----------------------//
+
+const promedioArray = unArray => sumarArrays2(unArray) / unArray.length;
+console.log(promedioArray(Prueba));
+
+//-----------Desafío final — Simulación de lógica de API---------------//
+const usuariosNuevos = [
+{id:1, nombre:"Ana", edad:20},
+{id:2, nombre:"Juan", edad:15},
+{id:3, nombre:"Pedro", edad:30}
+]
+//-------------------EJ01-----------------------//
+const obtenerUsuarios = () => usuariosNuevos;
+//-------------------EJ02-----------------------//
+const obtenerUsuariosPorID = id => usuariosNuevos[id];
+//-------------------EJ03-----------------------//
+const obtenerMayoresUsuarios = () =>{
+ arrayOrdenado = usuariosNuevos.sort((a,b) => b.edad - a.edad);
+ return arrayOrdenado[0];
+ }
+ console.log(obtenerMayoresUsuarios(usuariosNuevos));
+ //-------------------EJ04-----------------------//
+
+ const crearUsuario = (nombre, edad) => usuariosNuevos.push({
+    id:usuariosNuevos.length + 1,
+    nombre:nombre,
+    edad:edad});
+ crearUsuario("felipe", 17);
+ console.log (usuariosNuevos);
