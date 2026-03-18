@@ -32,4 +32,37 @@ console.log(obtenerPares(Prueba));
 
 //-------------------OBJETOS-----------------------//
 //-------------------EJ08-----------------------//
+const usuario = {
+ nombre: "Ana",
+ edad: 20,
+ activo: false
+}
+const descripcionUsuario = usuario => console.log(`${usuario.nombre} tiene ${usuario.edad} años`);
+descripcionUsuario(usuario);
 
+//-------------------EJ09-----------------------//
+
+const activarUsuario = usuario => usuario.activo = true;
+activarUsuario(usuario);
+console.log(usuario.activo);
+
+//-------------------EJ10-----------------------//
+
+const productos = [
+{nombre:"Mouse", precio:10},
+{nombre:"Teclado", precio:25},
+{nombre:"Monitor", precio:200}
+]
+
+const precioTotal = productos =>{
+    let total = 0;
+    productos.forEach(element =>{
+        total += element.precio;
+    })
+    return total;
+}
+console.log(precioTotal(productos));
+
+
+//--------------Parte 4 — ES6-----------------//
+//-------------------EJ11-----------------------//
