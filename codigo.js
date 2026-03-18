@@ -144,6 +144,18 @@ console.log(mayoresA18(usuarios))
 const sumarArrays2 = unArray => unArray.reduce((a,b) => a + b, 0);
 console.log(sumarArrays2(Prueba));
 
+    // EJ14 y EJ15
+    const producto = {
+        nombre: 'Notebook',
+        precio: 1000
+    };
+    const { nombre, precio } = producto;
+    console.log('EJ14 - nombre ->', nombre); // Notebook
+    console.log('EJ14 - precio ->', precio); // 1000
+    const productoConStock = { ...producto, stock: 5 };
+    console.log('EJ15 - productoConStock ->', productoConStock);
+
+
 //----------Parte 6 — Problemas más reales----------//
 //-------------------EJ16-----------------------//
 
