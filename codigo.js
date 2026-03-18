@@ -1,3 +1,62 @@
+// EJ1
+function formatearNombre(nombre) {
+if (typeof nombre !== 'string') return '';
+let start = 0;
+while (start < nombre.length && nombre[start] === ' ') start++;
+if (start === nombre.length) return '';
+let end = nombre.length - 1;
+while (end >= 0 && nombre[end] === ' ') end--;
+const primera = nombre[start].toUpperCase();
+let resto = '';
+for (let i = start + 1; i <= end; i++) {
+resto += nombre[i].toLowerCase();
+}
+return primera + resto;
+}
+
+
+
+
+    function contarLetras(texto) {
+        if (typeof texto !== 'string') return 0;
+        let contador = 0;
+        for (let i = 0; i < texto.length; i++) {
+            if (texto[i] !== ' ') contador++;
+        }
+        return contador;
+    }
+
+
+    // EJ3
+    function maximo(a, b, c) {
+        let mayor = a;
+        if (b > mayor) mayor = b;
+        if (c > mayor) mayor = c;
+        return mayor;
+    }
+
+
+    // EJ4
+    function validarPassword(password) {
+        if (typeof password !== 'string') return false;
+        if (password.length < 8) return false;
+        for (let i = 0; i < password.length; i++) {
+            const ch = password[i];
+            if (ch >= '0' && ch <= '9') return true;
+        }
+        return false;
+    }
+
+  // para mostrar en consola
+    console.log('formatearNombre("JUAN") ->', formatearNombre('JUAN')); // Juan
+    console.log('formatearNombre("mARIA") ->', formatearNombre('mARIA')); // Maria
+    console.log('contarLetras("hola mundo") ->', contarLetras('hola mundo')); // 9
+    console.log('maximo(3,9,5) ->', maximo(3,9,5)); // 9
+    console.log('validarPassword("abc12345") ->', validarPassword('abc12345')); // true
+    console.log('validarPassword("short1") ->', validarPassword('short1')); // false
+
+
+
 
 //-------------------ARRAYS-----------------------//
 //-------------------EJ05-----------------------//
@@ -66,3 +125,4 @@ console.log(precioTotal(productos));
 
 //--------------Parte 4 — ES6-----------------//
 //-------------------EJ11-----------------------//
+
